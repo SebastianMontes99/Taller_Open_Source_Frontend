@@ -7,10 +7,15 @@ import { MaterialModule } from 'src/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UpdateOfferComponent } from './components/update-offer/update-offer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterOfferComponent } from './components/register-offer/register-offer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UpdateOfferComponent,
+    RegisterOfferComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialModule,
     HttpClientModule,
     RouterModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
