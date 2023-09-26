@@ -1,1 +1,31 @@
-<p>register-offer works!</p>
+<mat-card class="container" style="background-image: url('https://www.hashtagvoyage.fr/wp-content/uploads/2016/12/canyonlands-mesa-arch.jpg'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <mat-card class="offer-card" style="padding: 20px; text-align: center;">
+    <h2 style="color: #007bff;">Registrar Oferta</h2>
+    <form (ngSubmit)="registerOffer()" #offerForm="ngForm">
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput type="text" id="title" name="title" [(ngModel)]="offer.title" required maxlength="60" placeholder="Ingresa tu título" style="width: 100%;">
+
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field>
+          <textarea matInput id="description" name="description" [(ngModel)]="offer.description" required placeholder="Ingresa una descripcion" style="width: 100%;"></textarea>
+
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput type="number" id="points" name="points" [(ngModel)]="offer.points" required max="100" placeholder="Ingresa tus points" style="width: 100%;">
+
+        </mat-form-field>
+      </div>
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" [disabled]="offerForm.invalid">Registrar</button>
+      </div>
+    </form>
+  </mat-card>
+</mat-card>

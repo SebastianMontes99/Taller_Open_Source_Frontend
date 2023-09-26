@@ -1,10 +1,31 @@
 {
   "offers": [
     {
-      "title": "Plan Free Yoga PLAN 2",
-      "description": "Plan free yoga at the park PLAN 2",
-      "points": 11,
+      "title": "Plan Free Yoga PLAN 3",
+      "description": "Plan free yoga at the park PLAN 3",
+      "points": 33,
       "id": 1
+    },
+    {
+      "id": 5,
+      "title": "HOLA",
+      "description": "HOLA",
+      "points": 12,
+      "businessId": "1"
+    },
+    {
+      "id": 6,
+      "title": "langostas trotando",
+      "description": "trotando langostas ",
+      "points": 20,
+      "businessId": ""
+    },
+    {
+      "id": 7,
+      "title": "LANGOSTAS MARINAS",
+      "description": "LANGOSTA PRO",
+      "points": 12,
+      "businessId": ""
     }
   ],
   "business": [

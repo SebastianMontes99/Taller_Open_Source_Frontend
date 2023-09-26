@@ -55,6 +55,8 @@ export class UpdateOfferComponent {
       this.openSnackBar('Los puntos deben ser menor o igual a 100','OK')
     }else{
       this.isEditing = false;
+      this.openSnackBar('Actualizado Correctamente','OK')
+      this.router.navigate(['business/offers'])
       this.offerService.updateOffer(this.offer.id, {
         title: this.updatedTitle,
         description: this.updatedDescription,

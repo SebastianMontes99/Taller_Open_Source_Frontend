@@ -8,7 +8,7 @@
     </ng-container>
     <ng-template #editTitle>
       <mat-form-field>
-        <input matInput [(ngModel)]="updatedTitle" placeholder="Título" maxlength="60">
+        <input matInput [(ngModel)]="updatedTitle" placeholder="Ingresa un titulo" maxlength="60">
       </mat-form-field>
     </ng-template>
     <ng-container *ngIf="!isEditing; else editDescription">
@@ -16,7 +16,7 @@
     </ng-container>
     <ng-template #editDescription>
       <mat-form-field>
-        <textarea matInput [(ngModel)]="updatedDescription" placeholder="Descripción"></textarea>
+        <textarea matInput [(ngModel)]="updatedDescription" placeholder="Ingresa una descripción"></textarea>
       </mat-form-field>
     </ng-template>
     <ng-container *ngIf="!isEditing; else editPoints">
@@ -24,7 +24,7 @@
     </ng-container>
     <ng-template #editPoints>
       <mat-form-field>
-        <input matInput type="number" [(ngModel)]="updatedPoints" placeholder="Puntos" maxlength="100" max="100">
+        <input matInput type="number" [(ngModel)]="updatedPoints" placeholder="Ingresa el points" maxlength="100" max="100">
       </mat-form-field>
     </ng-template>
     <ng-container *ngIf="!isEditing; else editButtons">
