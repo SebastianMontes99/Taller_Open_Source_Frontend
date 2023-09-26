@@ -1,0 +1,38 @@
+<mat-card class="container" style="background-image: url('https://wallpapers.com/images/hd/windows-7-background-imfecqv6cnsicbx4.jpg');">
+  <mat-card class="offer-card">
+    <h1>Offer N°: {{ offer.id }}</h1>
+
+
+    <ng-container *ngIf="!isEditing; else editTitle">
+      <h2>{{ offer.title }}</h2>
+    </ng-container>
+    <ng-template #editTitle>
+      <mat-form-field>
+        <input matInput [(ngModel)]="updatedTitle" placeholder="Título" maxlength="60">
+      </mat-form-field>
+    </ng-template>
+    <ng-container *ngIf="!isEditing; else editDescription">
+      <p>{{ offer.description }}</p>
+    </ng-container>
+    <ng-template #editDescription>
+      <mat-form-field>
+        <textarea matInput [(ngModel)]="updatedDescription" placeholder="Descripción"></textarea>
+      </mat-form-field>
+    </ng-template>
+    <ng-container *ngIf="!isEditing; else editPoints">
+      <p>Points: {{ offer.points }}</p>
+    </ng-container>
+    <ng-template #editPoints>
+      <mat-form-field>
+        <input matInput type="number" [(ngModel)]="updatedPoints" placeholder="Puntos" maxlength="100" max="100">
+      </mat-form-field>
+    </ng-template>
+    <ng-container *ngIf="!isEditing; else editButtons">
+      <button mat-raised-button color="primary" (click)="startEditing()">Editar</button>
+    </ng-container>
+    <ng-template #editButtons>
+      <button mat-raised-button color="primary" (click)="saveChanges()">Guardar</button>
+      <button mat-raised-button color="warn" (click)="cancelEditing()" routerLink="">Cancelar</button>
+    </ng-template>
+  </mat-card>
+</mat-card>

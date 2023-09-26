@@ -11,7 +11,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { OfferTableComponent } from './components/offer-table/offer-table.component';
-
 import{MatTableModule} from '@angular/material/table';
 import{MatPaginatorModule} from '@angular/material/paginator';
 import{MatButtonModule} from '@angular/material/button';
@@ -20,12 +19,16 @@ import{ReactiveFormsModule} from '@angular/forms';
 import{MatInputModule} from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
+import { UpdateOfferComponent } from './components/update-offer/update-offer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterOfferComponent } from './components/register-offer/register-offer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OfferTableComponent,
-  
+    UpdateOfferComponent,
+    RegisterOfferComponent
   ],
   imports: [
     MatIconModule,
@@ -45,6 +48,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatInputModule,
     MatToolbarModule,
     MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
