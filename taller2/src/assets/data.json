@@ -1,10 +1,11 @@
 {
   "offers": [
     {
-      "title": "Plan Free Yoga Nuevo",
-      "description": "Plan free yoga at the park lol",
-      "points": 99,
-      "id": "1"
+      "id":1,
+      "title":"Plan Free Yoga",
+      "description":"Plan free yoga at the park",
+      "points":10,
+      "businessId":"1"
     }
   ],
   "business": [
